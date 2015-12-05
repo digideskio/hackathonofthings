@@ -30,18 +30,42 @@ foreach($events as $event) {
 
 $horses = $database->getHorses();
 
-foreach ($horses as $horse) {
-    $previousRaces = $database->getHorseRaces($horse->horse_id);
-    foreach($previousRaces as $race) {
+$horseRows = array();
 
-    }
+$currentHumidity = $weather->getHumidity();
+$currentLuminance = $weather->getLuminance();
+$currentPressure = $weather->getPressure();
+$currentTemperature = $weather->getTemperature();
+
+foreach ($horses as $horse) {
+    $horseRow = $horse;
+    $previousRaces = $database->getHorseRaces($horse->horse_id);
+    $i = 0;
+    $horseRow->humidity = countPercent($previousRaces, $currentHumidity, 'humidity');
+    $horseRow->luminance = countPercent($previousRaces, $currentLuminance, 'luminance');
+    $horseRow->pressure = countPercent($previousRaces, $currentPressure, 'pressure');
+    $horseRow->temperature = countPercent($previousRaces, $currentTemperature, 'temperature');
+    array_push($horseRows, $horseRow);
 }
 
-/*var_dump("<pre>");
-var_dump($weather->getHumidity());
-var_dump($weather->getLuminance());
-var_dump($weather->getPressure());
-var_dump($weather->getTemperature());*/
+function countPercent($previousRaces, $currenctHumidity, $field) {
+    $closestHumidity = 0;
+    $humidityPosition = 0;
+    $i = 0;
+    foreach($previousRaces as $race) {
+        if ($i == 0) {
+            $closestHumidity = $race->$field;
+            $humidityPosition = $race->position;
+        } else {
+            if (abs($currenctHumidity - $closestHumidity) > abs($race->$field - $currenctHumidity)) {
+                $closestHumidity = $race->$field;
+                $humidityPosition = $race->position;
+            }
+        }
+        $i++;
+    }
+    return round((1 - ($humidityPosition / 6)) * 100, 2);
+}
 ?>
 </body>
 </html>
