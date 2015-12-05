@@ -45,6 +45,7 @@ foreach ($horses as $horse) {
     $horseRow->luminance = countPercent($previousRaces, $currentLuminance, 'luminance');
     $horseRow->pressure = countPercent($previousRaces, $currentPressure, 'pressure');
     $horseRow->temperature = countPercent($previousRaces, $currentTemperature, 'temperature');
+    $horseRow->totalSuccess = ($horseRow->humidity + $horseRow->luminance + $horseRow->pressure + $horseRow->temperature) / 4;
     array_push($horseRows, $horseRow);
 }
 
