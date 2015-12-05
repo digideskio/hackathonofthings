@@ -20,7 +20,7 @@
 }
 
 .jumbotron::before {
-	background: url("../img/harnessracing.jpg");
+	background: url("https://midlifeinmaine.files.wordpress.com/2011/01/eharnessracing1.jpg");
 	background-size: cover ;
 	background-repeat:no-repeat;
 	background-position: center;
@@ -31,7 +31,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	opacity: .4;
+	opacity: 0.6;
 
 }
 
@@ -51,7 +51,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	opacity: .4;
+	opacity: .8;
 }
 
 .humidity {
@@ -70,7 +70,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	opacity: .4;
+	opacity: .8;
 }
 
 .pressure {
@@ -89,7 +89,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	opacity: .4;
+	opacity: .8;
 }
 
 .luminance {
@@ -108,7 +108,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	opacity: .4;
+	opacity: .8;
 }
 
 
@@ -120,4 +120,5 @@
 	font-size: 45px;
 	font-family: 'League Gothic','Arial Narrow',sans-serif;
 	font-weight: bolder;
+	color: #fff;
 }
