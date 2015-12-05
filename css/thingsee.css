@@ -8,5 +8,20 @@
     display: none !important;
 }
 .dataTables_paginate {
-    display: none !important;
+	display: none !important;
+}
+.iconimg {
+	min-height: 150px !important; 
+
+}
+
+.temperature {
+	background-image: url("../img/temperature.png");
+	background-repeat:no-repeat;
+	font-weight: bold;
+	-khtml-opacity:.50; 
+	-moz-opacity:.50; 
+	-ms-filter:"alpha(opacity=50)";
+	filter:alpha(opacity=50);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
 }
