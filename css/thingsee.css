@@ -1,3 +1,12 @@
 .highest_luck {
     background-color: #5cb85c;
 }
+.highest_luck > td {
+    color: white;
+}
+.dataTables_info {
+    display: none !important;
+}
+.dataTables_paginate {
+    display: none !important;
+}
