@@ -17,7 +17,7 @@ class Database {
     }
 
     public function getRaces() {
-        $sql = "SELECT * FROM race";
+        $sql = "SELECT * FROM race ORDER BY date DESC";
         $result = $this->conn->query($sql);
         $races = array();
         while ($row = $result->fetch_object()) {

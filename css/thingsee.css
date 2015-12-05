@@ -123,3 +123,8 @@
 	font-weight: bolder;
 	color: #fff;
 }
+
+.btn-default.active {
+	background-color: #5CB85C !important;
+	border-color: #5CB85C !important;
+}

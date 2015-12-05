@@ -16,4 +16,15 @@ $( document ).ready(function() {
     });
     $highestRow.addClass('highest_luck');
     $('.dataTables_length').html('<label style="font-weight: bold; font-size: 25px;">Insights</label>');
+
+
+    $('.date-filter').on('click', function(){
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).addClass('active');
+        }
+    });
+
+
 });

@@ -157,8 +157,8 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
             <div class="btn-group btn-group-lg" data-toggle="buttons">
                 <?php
                 foreach($database->getRaces() as $race) {
-                    echo '<label class="btn btn-default btn-block active">
-                            <input type="checkbox" autocomplete="off" checked>'.mb_substr($race->date, 0, 10).'
+                    echo '<label class="btn btn-default btn-block active date-filter" id="'.$race->race_id.'">
+                            '.mb_substr($race->date, 0, 10).'
                           </label>';
                 }
                 ?>
