@@ -75,10 +75,11 @@ foreach ($horses as $horse) {
     $horseRow = $horse;
     $previousRaces = $database->getHorseRaces($horse->horse_id);
     $i = 0;
+	$horseRow->temperature =  countPercent($previousRaces, $currentTemperature, 'temperature');
     $horseRow->humidity = countPercent($previousRaces, $currentHumidity, 'humidity');
     $horseRow->luminance = countPercent($previousRaces, $currentLuminance, 'luminance');
     $horseRow->pressure = countPercent($previousRaces, $currentPressure, 'pressure');
-    $horseRow->temperature = countPercent($previousRaces, $currentTemperature, 'temperature');
+    
     $horseRow->totalWinning = ($horseRow->humidity + $horseRow->luminance + $horseRow->pressure + $horseRow->temperature) / 4;
     array_push($horseRows, $horseRow);
 }
@@ -140,18 +141,31 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
         <p>This site is for waging in harness races</p>
 
         <div class="row">
-            <div class="col-md-3">
-                <i class="fa fa-sun-o"></i> <?php echo $currentLuminance; ?> luminance
+		
+			<div class="col-md-3">
+			<img src="img/temperature.png" alt="Temperature">
+			<p>Temperature <?php echo $currentTemperature; ?> ºC
+				</p>
             </div>
-            <div class="col-md-3">
-                <i class="fa fa-fire"></i> <?php echo $currentTemperature; ?> temperature
+			
+			<div class="col-md-3">
+			<img src="img/humidity.png" alt="Humidity">
+			<p> Humidity <?php echo $currentHumidity; ?> %rh
+				</p>
             </div>
+		
             <div class="col-md-3">
-                <i class="fa fa-umbrella"></i> <?php echo $currentHumidity; ?> humidity
-            </div>
+			<img src="img/luminance.png" alt="Luminance">			
+			<p>Luminance <?php echo $currentLuminance; ?> lux
+				</p>
+			</div>
+	
             <div class="col-md-3">
-                <i class="fa fa-wrench"></i> <?php echo $currentPressure; ?> pressure
+			<img src="img/pressure.png" alt="Pressure">
+			<p>Pressure <?php echo $currentPressure; ?> hPa
+				</p>
             </div>
+			
         </div>
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
 		-->
