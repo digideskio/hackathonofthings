@@ -10,4 +10,5 @@ $( document ).ready(function() {
         }
     });
     $highestRow.addClass('highest_luck');
+    $('.dataTables_length').html('<label>Insights</label>');
 });
