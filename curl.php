@@ -1,5 +1,4 @@
 <?php
-include 'passwords.php';
 class ThingSee {
 
     const URL_MAX_LENGTH = 2050;
@@ -12,8 +11,6 @@ class ThingSee {
     private $email;
     private $password;
     private $deviceUuid;
-
-    private $headers;
 
     public function __construct(){
         $passwords = new Passwords();

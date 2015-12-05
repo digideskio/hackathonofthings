@@ -7,13 +7,16 @@
 </head>
 <body>
 <?php
+include 'passwords.php';
 include 'curl.php';
 include 'weather.php';
+include 'db.php';
 
 $weather = new Weather();
-
-
+$database = new Database();
 $thingsee = new ThingSee();
+
+
 $thingsee->getToken();
 $currentData = $thingsee->getData();
 $events = $currentData->events;
@@ -24,6 +27,16 @@ foreach($events as $event) {
         $weather->setValue($sense->sId, $sense->val, $sense->ts);
     }
 }
+
+$horses = $database->getHorses();
+
+foreach ($horses as $horse) {
+    $previousRaces = $database->getHorseRaces($horse->horse_id);
+    foreach($previousRaces as $race) {
+
+    }
+}
+
 /*var_dump("<pre>");
 var_dump($weather->getHumidity());
 var_dump($weather->getLuminance());
