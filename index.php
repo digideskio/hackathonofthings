@@ -106,13 +106,13 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">Wages</a>
+                    <a class="page-scroll" href="#">Wages</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#download">Profile</a>
+                    <a class="page-scroll" href="#">Profile</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Settings</a>
+                    <a class="page-scroll" href="#">Settings</a>
                 </li>
             </ul>
         </div>
