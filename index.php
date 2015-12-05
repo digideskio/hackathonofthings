@@ -196,6 +196,9 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
                 ?>
                 <tbody>
             </table>
+            <div class='overlay'>
+                <i class="fa fa-spinner fa-spin table-loader"></i>
+            </div>
         </div>
 
     </div>
@@ -211,7 +214,7 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/s/bs-3.3.5/jqc-1.11.3,dt-1.10.10,af-2.1.0/datatables.min.js"></script>
-<script src="thingsee.js"></script>
+<script src="js/thingsee.js"></script>
 </body>
 </html>
 

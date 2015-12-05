@@ -24,6 +24,14 @@ $( document ).ready(function() {
         } else {
             $(this).addClass('active');
         }
+        $('.overlay').show();
+        setTimeout(function(){
+            var items = [0,1,2,3,4,5];
+            var item = items[Math.floor(Math.random()*items.length)];
+            console.log(item);
+            $('.overlay').hide();
+            $('.sorting:eq('+item+')').click();
+        }, 1000)
     });
 
 
