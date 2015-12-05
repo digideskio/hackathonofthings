@@ -1,3 +1,13 @@
 $( document ).ready(function() {
-    $('#horse_standing').DataTable();
+    var highestLuck = null;
+    var $highestRow = null;
+    $('#horse_standing').DataTable({
+        fnRowCallback: function(row, aData) {
+            if (highestLuck == null || parseFloat(aData[5]) > highestLuck) {
+                highestLuck = parseFloat(aData[5]);
+                $highestRow = $(row);
+            }
+        }
+    });
+    $highestRow.addClass('highest_luck');
 });
