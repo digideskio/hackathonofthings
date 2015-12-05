@@ -1,15 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harness racing</title>
+</head>
+<body>
 <?php
+include 'curl.php';
 
-//initialize the session
-$ch = curl_init();
-
-//set options
-curl_setopt($ch, CURLOPT_URL, "http://www.example.com");
-
-//execute the session
-curl_exec($ch);
-
-//close the session
-curl_close($ch);
-
+$thingsee = new ThingSee();
+$thingsee->getToken();
+$thingsee->getData();
 ?>
+</body>
+</html>
+
