@@ -154,10 +154,10 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <div class="btn-group" data-toggle="buttons">
+            <div class="btn-group btn-group-lg" data-toggle="buttons">
                 <?php
                 foreach($database->getRaces() as $race) {
-                    echo '<label class="btn btn-default btn-lg btn-block active">
+                    echo '<label class="btn btn-default btn-block active">
                             <input type="checkbox" autocomplete="off" checked>'.$race->date.'
                           </label>';
                 }

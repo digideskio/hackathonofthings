@@ -32,8 +32,67 @@
 	left: 0;
 	right: 0;
 	opacity: .4;
-
 }
+
+.humidity {
+	position: relative;
+	z-index: 5;
+}
+
+.humidity::before {
+	background-image: url("../img/humidity.png");
+	background-repeat:no-repeat;
+	background-position: center;
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: .4;
+}
+
+.pressure {
+	position: relative;
+	z-index: 5;
+}
+
+.pressure::before {
+	background-image: url("../img/pressure.png");
+	background-repeat:no-repeat;
+	background-position: center;
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: .4;
+}
+
+.luminance {
+	position: relative;
+	z-index: 5;
+}
+
+.luminance::before {
+	background-image: url("../img/luminance.png");
+	background-repeat:no-repeat;
+	background-position: center;
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: .4;
+}
+
+
+
 
 .iconimg_text {
 	padding-top: 37px;
