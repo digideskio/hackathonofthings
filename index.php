@@ -121,8 +121,7 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
 
 <div class="jumbotron">
     <div class="container">
-        <h1>Harnestica!</h1>
-        <p>Select the event from the left. On the right side of the page you will see the the winning factor of every horse.</p>
+        <h1 style="color: #ffffff">Harnestica!</h1>
 
         <div class="row">
 		
@@ -197,12 +196,13 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
 
     </div>
 
-    <footer class="footer footer-inverse navbar-fixed-bottom">
-        <hr>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
-            <p>&copy; Sami Suo-Heikki & Teemu Kuutti </p>
+            <p class="text-muted">&copy; Sami Suo-Heikki & Teemu Kuutti </p>
         </div>
     </footer>
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

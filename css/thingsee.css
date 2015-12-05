@@ -111,9 +111,6 @@
 	opacity: .8;
 }
 
-
-
-
 .iconimg_text {
 	padding-top: 37px;
 	text-align: center;
@@ -122,3 +119,24 @@
 	font-weight: bolder;
 	color: #fff;
 }
+
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: #f5f5f5;
+}
+
+.container .text-muted {
+	margin: 20px 0;
+}
+
+.footer > .container {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.span
