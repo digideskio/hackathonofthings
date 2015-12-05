@@ -131,7 +131,7 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
             </div>
 			
 			<div class="col-md-3 iconimg humidity">
-                <h2 class="iconimg_text"><?php echo $currentHumidity; ?> %rh
+                <h2 class="iconimg_text"><?php echo $currentHumidity; ?> % rh
                 </h2>
             </div>
 		
@@ -141,7 +141,7 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
 			</div>
 	
             <div class="col-md-3 iconimg pressure">
-                <h2 class="iconimg_text"><?php echo $currentPressure; ?> hPa
+                <h2 class="iconimg_text"><?php echo round($currentPressure, 2); ?> hPa
                 </h2>
             </div>
 			
@@ -156,8 +156,8 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
             <div class="btn-group btn-group-lg" data-toggle="buttons">
                 <?php
                 foreach($database->getRaces() as $race) {
-                    echo '<label class="btn btn-default btn-block active">
-                            <input type="checkbox" autocomplete="off" checked>'.$race->date.'
+                    echo '<label class="btn btn-default btn-block active date-filter" id="'.$race->race_id.'">
+                            '.mb_substr($race->date, 0, 10).'
                           </label>';
                 }
                 ?>
@@ -174,24 +174,30 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
                 <td>Winning rate by atmospheric pressure</td>
                 <td>Winning rate by luminance</td>
                 <td>Total winning rate</td>
+                <td>Trend</td>
                 </thead>
 
                 <tbody>
 
                 <?php
                 foreach($horseRows as $row) {
+                    $trend = rand(0, 1) == 1 ? 't' : 'f';
                     echo '<tr>';
                     echo '<td>' . utf8_encode($row->name) . '</td>';
-                    echo '<td>' . $row->temperature . ' %</td>';
-                    echo '<td>' . $row->humidity . ' %</td>';
-                    echo '<td>' . $row->pressure . ' %</td>';
-                    echo '<td>' . $row->temperature . ' %</td>';
-                    echo '<td>' . $row->totalWinning . ' %</td>';
+                    echo '<td>' . round($row->temperature) . ' %</td>';
+                    echo '<td>' . round($row->humidity) . ' %</td>';
+                    echo '<td>' . round($row->pressure) . ' %</td>';
+                    echo '<td>' . round($row->temperature) . ' %</td>';
+                    echo '<td>' . round($row->totalWinning) . ' %</td>';
+                    echo '<td>'.$trend.'</td>';
                     echo '</tr>';
                 }
                 ?>
                 <tbody>
             </table>
+            <div class='overlay'>
+                <i class="fa fa-spinner fa-spin table-loader"></i>
+            </div>
         </div>
 
     </div>
@@ -208,7 +214,7 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/s/bs-3.3.5/jqc-1.11.3,dt-1.10.10,af-2.1.0/datatables.min.js"></script>
-<script src="thingsee.js"></script>
+<script src="js/thingsee.js"></script>
 </body>
 </html>
 
