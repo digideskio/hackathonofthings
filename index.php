@@ -175,19 +175,22 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
                 <td>Winning rate by atmospheric pressure</td>
                 <td>Winning rate by luminance</td>
                 <td>Total winning rate</td>
+                <td>Trend</td>
                 </thead>
 
                 <tbody>
 
                 <?php
                 foreach($horseRows as $row) {
+                    $trend = rand(0, 1) == 1 ? 't' : 'f';
                     echo '<tr>';
                     echo '<td>' . utf8_encode($row->name) . '</td>';
-                    echo '<td>' . $row->temperature . ' %</td>';
-                    echo '<td>' . $row->humidity . ' %</td>';
-                    echo '<td>' . $row->pressure . ' %</td>';
-                    echo '<td>' . $row->temperature . ' %</td>';
-                    echo '<td>' . $row->totalWinning . ' %</td>';
+                    echo '<td>' . round($row->temperature) . ' %</td>';
+                    echo '<td>' . round($row->humidity) . ' %</td>';
+                    echo '<td>' . round($row->pressure) . ' %</td>';
+                    echo '<td>' . round($row->temperature) . ' %</td>';
+                    echo '<td>' . round($row->totalWinning) . ' %</td>';
+                    echo '<td>'.$trend.'</td>';
                     echo '</tr>';
                 }
                 ?>
