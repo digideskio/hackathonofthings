@@ -46,11 +46,13 @@ class ThingSee {
     public function getData() {
         $ch = curl_init("http://api.thingsee.com/v2//events/".$this->deviceUuid);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             'Authorization: Bearer ' . $this->accountAuthToken
         ));
 
-        $result = curl_exec($ch);
-        var_dump($result);
+        $result = json_decode(curl_exec($ch));
+        curl_close($ch);
+        return $result;
     }
 }
