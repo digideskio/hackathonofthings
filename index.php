@@ -127,23 +127,23 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
         <div class="row">
 		
 			<div class="col-md-3 iconimg temperature">
-			<p><?php echo $currentTemperature; ?> ºC
-				</p>
+			<h2 class="iconimg_text"><?php echo $currentTemperature; ?> ºC
+				</h2>
             </div>
 			
 			<div class="col-md-3 iconimg humidity">
-			<p><?php echo $currentHumidity; ?> %rh
-				</p>
+                <h2 class="iconimg_text"><?php echo $currentHumidity; ?> %rh
+                </h2>
             </div>
 		
-            <div class="col-md-3 iconimg luminance">		
-			<p><?php echo $currentLuminance; ?> lux
-				</p>
+            <div class="col-md-3 iconimg luminance">
+                <h2 class="iconimg_text"><?php echo $currentLuminance; ?> lux
+                </h2>
 			</div>
 	
             <div class="col-md-3 iconimg pressure">
-			<p><?php echo $currentPressure; ?> hPa
-				</p>
+                <h2 class="iconimg_text"><?php echo $currentPressure; ?> hPa
+                </h2>
             </div>
 			
         </div>
