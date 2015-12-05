@@ -41,10 +41,12 @@ $thingsee->getToken();
 $currentData = $thingsee->getData();
 $events = $currentData->events;
 foreach($events as $event) {
-    $cause = $event->cause;
-    $senses = $cause->senses;
-    foreach($senses as $sense) {
-        $weather->setValue($sense->sId, $sense->val, $sense->ts);
+    if (isset($event->cause) && isset($event->cause->senses)) {
+        $cause = $event->cause;
+        $senses = $cause->senses;
+        foreach($senses as $sense) {
+            $weather->setValue($sense->sId, $sense->val, $sense->ts);
+        }
     }
 }
 
