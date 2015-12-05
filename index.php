@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../img/favicon.ico">
 
-    <title>Harness Racing Wager</title>
+    <title>Harnestica</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -97,7 +97,7 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" href="#">
-                <i class="fa fa-trophy"></i> <span class="light">Harness Raging Wager</span>
+                <i class="fa fa-trophy"></i> <span class="light">Harnestica</span>
             </a>
         </div>
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -121,8 +121,8 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
 
 <div class="jumbotron">
     <div class="container">
-        <h1>Harness Racing Wager!</h1>
-        <p>This site is for waging in harness races</p>
+        <h1>Harnestica!</h1>
+        <p>Select the event from the left. On the right side of the page you will see the the winning factor of every horse.</p>
 
         <div class="row">
 		
@@ -183,11 +183,11 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
                 foreach($horseRows as $row) {
                     echo '<tr>';
                     echo '<td>' . utf8_encode($row->name) . '</td>';
-                    echo '<td>' . $row->temperature . '</td>';
-                    echo '<td>' . $row->humidity . '</td>';
-                    echo '<td>' . $row->pressure . '</td>';
-                    echo '<td>' . $row->temperature . '</td>';
-                    echo '<td>' . $row->totalWinning . '</td>';
+                    echo '<td>' . $row->temperature . ' %</td>';
+                    echo '<td>' . $row->humidity . ' %</td>';
+                    echo '<td>' . $row->pressure . ' %</td>';
+                    echo '<td>' . $row->temperature . ' %</td>';
+                    echo '<td>' . $row->totalWinning . ' %</td>';
                     echo '</tr>';
                 }
                 ?>
@@ -196,8 +196,9 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
         </div>
 
     </div>
-    <hr>
-    <footer>
+
+    <footer class="footer footer-inverse navbar-fixed-bottom">
+        <hr>
         <div class="container">
             <p>&copy; Sami Suo-Heikki & Teemu Kuutti </p>
         </div>
