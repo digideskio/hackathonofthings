@@ -1,1 +1,6 @@
-Read me
+Harnestica is web application giving you insights of which horse is going to win the next harness race. Harnestica gathers data from previous races including temperature, humidity, luminance and air pressure. And with our algorithm we will combine the analyzed data with the race results bringing you the insights of which horse is going to win the next race. Helping you to bet in the right horse.
+In harnestica application you can first see the live weather data from the race. This data is directly transfered from the thingsee device which is located in the track. And then for the most interesting part. Finding out which horse should you bet on. The winning rate of each horse is specified in their own column and our algorithm also calculates the total winning rate.
+We have also included insights of the trend. Is the winning rate going up or down.
+You are also able to sort and search for a specific stats. Making the application supereasy to use. For other factories you are also able to filter previous races.
+
+LIVE DEMO: harnestica.cloudit.fi

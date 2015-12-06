@@ -166,7 +166,7 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
             </div>
         </div>
 
-        <div class="col-md-9">
+        <div class="col-md-9" id="horse_table_div" style="overflow-x: scroll;">
 
             <table class="table table-bordered" id="horse_standing">
                 <thead style="font-weight: bold">
@@ -205,7 +205,7 @@ function countPercent($previousRaces, $currenctHumidity, $field) {
     </div>
 
 
-    <footer class="navbar navbar-default navbar-fixed-bottom">
+    <footer class="navbar navbar-default navbar-fixed-bottom hidden-xs">
         <div class="container">
             <p class="text-muted">&copy; Sami Suo-Heikki & Teemu Kuutti </p>
         </div>
